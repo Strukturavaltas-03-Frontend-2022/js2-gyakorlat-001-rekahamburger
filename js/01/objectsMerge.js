@@ -1,24 +1,23 @@
 
 
- -
- 
- 
- 
+-
 
 
-function objectsMerge (x, y, ...z) {
-  
+  function objectsMerge() {
+    let foo = {}
 
-  console.log(arguments);
-  console.log(x, y, z);
-  
+    for (let i = 0; i < arguments.length; i++) {
+      foo = [Object.values(arguments)]
+    }
 
- return ([number (...value)]);
-      
-      }
-      
-      
-      
+    
+  }
+
+
+
+
+
+
 
 
 export default objectsMerge;

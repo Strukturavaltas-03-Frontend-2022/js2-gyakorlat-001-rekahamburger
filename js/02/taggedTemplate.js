@@ -7,15 +7,13 @@ const johnDoe = {
 
 
 
-const taggedTemplate = (texts, ...values) => 
-texts.map((text, index) =>
-`${text}${values[index] ?`<strong>${values[index]()}<\strong>` : ''}` ).join ('');
+function taggedTemplate(text){
+    if (typeof(text) === 'string'){
+        console.log('<strong>' + text + '</strong>');
+    }else{
+        console.log('<i>' + text + '</i>');
+    }
+}
+document.body.innerHTML = ${text};
 
-
-const template = taggedTemplate `My name is $(johndoe.firstName) $(johndoe.lastname)`
-
-document.body.innerHTML
-export default taggedTemplate;
-
-
-
+export default taggedTemplate
